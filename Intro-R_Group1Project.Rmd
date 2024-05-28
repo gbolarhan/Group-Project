@@ -1,0 +1,92 @@
+---
+title: "Introduction to R - Group Project"
+output: html_notebook
+---
+
+## *Author*: "Tatjana Nill and Omogbolahan Alli",
+
+### Problem: Problem Statement: Find high attack Countries, traffic exchange and attack duration to prevent future attacks!
+
+Step1: Identify high attacked countries
+Step2: identify pattern of attack duration or exchange data
+Step3: Are the attacked channels the same?
+Step4: What is the duration of the attack time, are they really critical - boot force or just penetration test?
+Step5: Conclusion on findings
+
+This is an [Cybersecurity: Suspicious Web Threat Interactions](https://www.kaggle.com/datasets/jancsg/cybersecurity-suspicious-web-threat-interactions) Project.
+
+First we need to prepare our environment by loading required libraries.
+```{r LOAD: Environment}
+library(tidyverse)
+library(ggplot2)
+library(shiny)
+library(dplyr)
+
+```
+
+Load data from my project location.
+```{r LOAD: DATA}
+# Read the dataset (adjust the path accordingly)
+CloudAttack <- read.csv("~/HULT/Introduction-R/Project/CloudWatch_Traffic_Web_Attack.csv")
+#Beggining of data Massaging & feature engineering
+is.Date(CloudAttack$creation_time) #Check if Creation Time is a Data
+is.Date(CloudAttack$end_time) #Check if End Time is a Data
+is.Date(CloudAttack$time) #Check if  Time is a Data
+
+
+table(CloudAttack$time) # what insights can we draw from time
+table(CloudAttack$creation_time) # what insights can we draw from start time of attack
+table(CloudAttack$end_time) # what insights can we draw from end time of attack
+
+
+```
+
+Step1: Identify high attacked countries
+Count the attacks per Country
+```{r COUNT: Attack per Country}
+
+# Step 1: Identify high-attacked countries
+high_attacked_countries <- CloudAttack %>%
+  group_by(src_ip_country_code) %>%
+  summarise(Attacks = n()) %>%
+  arrange(desc(Attacks))
+
+# Create a bar chart for attacked countries
+ggplot(high_attacked_countries, aes(x = reorder(src_ip_country_code, Attacks), y = Attacks)) +
+  geom_bar(stat = "identity", fill = "#1b98e0") +
+  labs(title = "Number of Attacks by Country",
+       x = "Country",
+       y = "Number of Attacks") +
+  theme_minimal()  # Customize the plot theme as desired
+
+# Find duration of each attack
+CloudAttack$attack_duration <- CloudAttack$end_time - CloudAttack$creation_time
+View(CloudAttack)
+table(CloudAttack$attack_duration) # All the attacks are 10 minutes long
+table(CloudAttack$src_ip) # Looks like the attacks are coming from a handful of IPs
+# Looks like the data isn't clean. 
+# We have US showing up alongside NL, IL(Illinios), CA (California)
+table(CloudAttack$src_ip_country_code) 
+
+```
+Step2: identify pattern of attack duration or exchange data
+
+```{r ANALYSIS: indentify pattern}
+# Show Ip adresses that attacks the US 
+
+
+
+# Show source IP country 
+```
+
+Which IPs should the US blacklist to reduce the amount of attacks
+
+```{r RESULT: Outcome}
+
+
+
+
+`````````
+
+
+
