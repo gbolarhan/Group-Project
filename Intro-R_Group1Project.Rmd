@@ -1,9 +1,9 @@
 ---
-title: "Predicting Web Traffic Attack Patterns"
-subtitle: "Web Traffic Attack Pattern"
-author: "Omogbolahan Alli & Tatjana Nill"
-email: "oalli@student.hult.edu"
-output: html_document
+Title: "Predicting Web Traffic Attack Patterns"
+Subtitle: "Web Traffic Attack Pattern"
+Authors: "Omogbolahan Alli & Tatjana Nill"
+Email: "oalli@student.hult.edu"
+Output: html_document
 ---
 
 ## Project Overview
@@ -205,5 +205,3 @@ grid.arrange(scatter_plot, duration_hist, bytes_in_line, bytes_out_line,
              total_bytes_inout, bytes_in_hist, num_of_us_attacks, 
              bytes_by_us_ip, ncol =2, nrow=4)
 ```
-
-This code will correctly load the required libraries, process the data, and generate the plots without errors. Each chunk of R code is enclosed in proper RMarkdown code blocks, and data manipulation is performed using tidyverse functions.

@@ -33,6 +33,14 @@ web_traffic <- read.csv("./CloudWatch_Traffic_Web_Attack.csv")
 head(web_traffic)
 str(web_traffic)
 
+x <- F
+x <- TRUE
+x <- F
+x <- F
+
+is.na(my_value)
+
+?pi
 # Copy dataframe before modifications
 traffic <- web_traffic
 
