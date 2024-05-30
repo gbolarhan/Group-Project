@@ -10,7 +10,7 @@ library(gridExtra)
 library(datasets)
 
 #Set my working directory
-path <-setwd("~/HULT/Introduction-R/Project")
+path <-setwd("/Users/gbolahanalli/Library/Mobile Documents/com~apple~CloudDocs/Documents/Gbolahan /Hult/Classes/3 Summer One/Introduction to R/GroupAss")
 
 #Define CloudWatch Variable to read the CSV File
 CloudWatch <- read_csv("CloudWatch_Traffic_Web_Attack.csv")

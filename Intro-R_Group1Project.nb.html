@@ -1753,7 +1753,7 @@ display: none;
 
 <!-- rnb-text-begin -->
 <div id="author-tatjana-nill-and-omogbolahan-alli" class="section level2">
-<h2><em>Author</em>: “Tatjana Nill and Omogbolahan Alli”,</h2>
+<h2><em>Author</em>: Tatjana Nill and Omogbolahan Alli</h2>
 <div id="problem-problem-statement-find-high-attack-countries-traffic-exchange-and-attack-duration-to-prevent-future-attacks" class="section level3">
 <h3>Problem: Problem Statement: Find high attack Countries, traffic
 exchange and attack duration to prevent future attacks!</h3>
@@ -1768,64 +1768,88 @@ Suspicious Web Threat Interactions</a> Project.</p>
 libraries.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyverse)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogcGFja2FnZSDigJh0aWR5dmVyc2XigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJh0aWJibGXigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJh0aWR5cuKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDQuMy4zXG5XYXJuaW5nOiBwYWNrYWdlIOKAmHJlYWRy4oCZIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gNC4zLjNcbldhcm5pbmc6IHBhY2thZ2Ug4oCYcHVycnLigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJhkcGx5cuKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDQuMy4zXG5XYXJuaW5nOiBwYWNrYWdlIOKAmHN0cmluZ3LigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJhmb3JjYXRz4oCZIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gNC4zLjNcbldhcm5pbmc6IHBhY2thZ2Ug4oCYbHVicmlkYXRl4oCZIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gNC4zLjNcbiJ9 -->
-<pre><code>Warning: package ‘tidyverse’ was built under R version 4.3.3
-Warning: package ‘tibble’ was built under R version 4.3.3
-Warning: package ‘tidyr’ was built under R version 4.3.3
-Warning: package ‘readr’ was built under R version 4.3.3
-Warning: package ‘purrr’ was built under R version 4.3.3
-Warning: package ‘dplyr’ was built under R version 4.3.3
-Warning: package ‘stringr’ was built under R version 4.3.3
-Warning: package ‘forcats’ was built under R version 4.3.3
-Warning: package ‘lubridate’ was built under R version 4.3.3</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoi4pSA4pSAIEF0dGFjaGluZyBjb3JlIHRpZHl2ZXJzZSBwYWNrYWdlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlIDIuMC4wIOKUgOKUgFxu4pyUIGRwbHlyICAgICAxLjEuNCAgICAg4pyUIHJlYWRyICAgICAyLjEuNVxu4pyUIGZvcmNhdHMgICAxLjAuMCAgICAg4pyUIHN0cmluZ3IgICAxLjUuMVxu4pyUIGx1YnJpZGF0ZSAxLjkuMyAgICAg4pyUIHRpYmJsZSAgICAzLjIuMVxu4pyUIHB1cnJyICAgICAxLjAuMiAgICAg4pyUIHRpZHlyICAgICAxLjMuMVxu4pSA4pSAIENvbmZsaWN0cyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgdGlkeXZlcnNlX2NvbmZsaWN0cygpIOKUgOKUgFxu4pyWIGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbuKcliBkcGx5cjo6bGFnKCkgICAgbWFza3Mgc3RhdHM6OmxhZygpXG7ihLkgVXNlIHRoZSBcdTAwMWJdODs7aHR0cDovL2NvbmZsaWN0ZWQuci1saWIub3JnL1x1MDAwN2NvbmZsaWN0ZWQgcGFja2FnZVx1MDAxYl04OztcdTAwMDcgdG8gZm9yY2UgYWxsIGNvbmZsaWN0cyB0byBiZWNvbWUgZXJyb3JzXG4ifQ== -->
-<pre><code>── Attaching core tidyverse packages ────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ lubridate 1.9.3     ✔ tibble    3.2.1
-✔ purrr     1.0.2     ✔ tidyr     1.3.1
-── Conflicts ──────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3Bsb3QyKVxubGlicmFyeShzaGlueSlcbmBgYCJ9 -->
-<pre class="r"><code>library(ggplot2)
-library(shiny)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogcGFja2FnZSDigJhzaGlueeKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDQuMy4zXG4ifQ== -->
-<pre><code>Warning: package ‘shiny’ was built under R version 4.3.3</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcblxuYGBgIn0= -->
-<pre class="r"><code>library(dplyr)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5gYGBcbmBgYCJ9 -->
+<pre class="r"><code>```r
+library(tidyverse)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogcGFja2FnZSDigJh0aWR5dmVyc2XigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJh0aWJibGXigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJh0aWR5cuKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDQuMy4zXG5XYXJuaW5nOiBwYWNrYWdlIOKAmHJlYWRy4oCZIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gNC4zLjNcbldhcm5pbmc6IHBhY2thZ2Ug4oCYcHVycnLigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJhkcGx5cuKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDQuMy4zXG5XYXJuaW5nOiBwYWNrYWdlIOKAmHN0cmluZ3LigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuV2FybmluZzogcGFja2FnZSDigJhmb3JjYXRz4oCZIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gNC4zLjNcbldhcm5pbmc6IHBhY2thZ2Ug4oCYbHVicmlkYXRl4oCZIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gNC4zLjNcbuKUgOKUgCBBdHRhY2hpbmcgY29yZSB0aWR5dmVyc2UgcGFja2FnZXMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAIHRpZHl2ZXJzZSAyLjAuMCDilIDilIBcbuKclCBkcGx5ciAgICAgMS4xLjQgICAgIOKclCByZWFkciAgICAgMi4xLjVcbuKclCBmb3JjYXRzICAgMS4wLjAgICAgIOKclCBzdHJpbmdyICAgMS41LjFcbuKclCBsdWJyaWRhdGUgMS45LjMgICAgIOKclCB0aWJibGUgICAgMy4yLjFcbuKclCBwdXJyciAgICAgMS4wLjIgICAgIOKclCB0aWR5ciAgICAgMS4zLjFcbuKUgOKUgCBDb25mbGljdHMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAIHRpZHl2ZXJzZV9jb25mbGljdHMoKSDilIDilIBcbuKcliBkcGx5cjo6ZmlsdGVyKCkgbWFza3Mgc3RhdHM6OmZpbHRlcigpXG7inJYgZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxu4oS5IFVzZSB0aGUgXHUwMDFiXTg7O2h0dHA6Ly9jb25mbGljdGVkLnItbGliLm9yZy9cdTAwMDdjb25mbGljdGVkIHBhY2thZ2VcdTAwMWJdODs7XHUwMDA3IHRvIGZvcmNlIGFsbCBjb25mbGljdHMgdG8gYmVjb21lIGVycm9yc1xuIn0= --&gt;
 </code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Load data from my project location.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBSZWFkIHRoZSBkYXRhc2V0IChhZGp1c3QgdGhlIHBhdGggYWNjb3JkaW5nbHkpXG5DbG91ZEF0dGFjayA8LSByZWFkLmNzdihcIn4vSFVMVC9JbnRyb2R1Y3Rpb24tUi9Qcm9qZWN0L0Nsb3VkV2F0Y2hfVHJhZmZpY19XZWJfQXR0YWNrLmNzdlwiKVxuXG4jIFN0ZXAgMTogSWRlbnRpZnkgaGlnaC1hdHRhY2tlZCBjb3VudHJpZXNcbmhpZ2hfYXR0YWNrZWRfY291bnRyaWVzIDwtIENsb3VkQXR0YWNrICU+JVxuICBncm91cF9ieShzcmNfaXBfY291bnRyeV9jb2RlKSAlPiVcbiAgc3VtbWFyaXNlKEF0dGFja3MgPSBuKCkpICU+JVxuICBhcnJhbmdlKGRlc2MoQXR0YWNrcykpXG5cbiMgQ3JlYXRlIGEgYmFyIGNoYXJ0XG5nZ3Bsb3QoaGlnaF9hdHRhY2tlZF9jb3VudHJpZXMsIGFlcyh4ID0gcmVvcmRlcihzcmNfaXBfY291bnRyeV9jb2RlLCBBdHRhY2tzKSwgeSA9IEF0dGFja3MpKSArXG4gIGdlb21fYmFyKHN0YXQgPSBcImlkZW50aXR5XCIsIGZpbGwgPSBcIiMxYjk4ZTBcIikgK1xuICBsYWJzKHRpdGxlID0gXCJOdW1iZXIgb2YgQXR0YWNrcyBieSBDb3VudHJ5XCIsXG4gICAgICAgeCA9IFwiQ291bnRyeVwiLFxuICAgICAgIHkgPSBcIk51bWJlciBvZiBBdHRhY2tzXCIpICtcbiAgdGhlbWVfbWluaW1hbCgpICAjIEN1c3RvbWl6ZSB0aGUgcGxvdCB0aGVtZSBhcyBkZXNpcmVkXG5gYGAifQ== -->
-<pre class="r"><code># Read the dataset (adjust the path accordingly)
+<p>Warning: package ‘tidyverse’ was built under R version 4.3.3 Warning:
+package ‘tibble’ was built under R version 4.3.3 Warning: package
+‘tidyr’ was built under R version 4.3.3 Warning: package ‘readr’ was
+built under R version 4.3.3 Warning: package ‘purrr’ was built under R
+version 4.3.3 Warning: package ‘dplyr’ was built under R version 4.3.3
+Warning: package ‘stringr’ was built under R version 4.3.3 Warning:
+package ‘forcats’ was built under R version 4.3.3 Warning: package
+‘lubridate’ was built under R version 4.3.3 ── Attaching core tidyverse
+packages ────────── tidyverse 2.0.0 ── ✔ dplyr 1.1.4 ✔ readr 2.1.5 ✔
+forcats 1.0.0 ✔ stringr 1.5.1 ✔ lubridate 1.9.3 ✔ tibble 3.2.1 ✔ purrr
+1.0.2 ✔ tidyr 1.3.1 ── Conflicts ────────────────────────────
+tidyverse_conflicts() ── ✖ dplyr::filter() masks stats::filter() ✖
+dplyr::lag() masks stats::lag() ℹ Use the ]8;;<a href="http://conflicted.r-lib.org/conflicted" class="uri">http://conflicted.r-lib.org/conflicted</a> package]8;; to
+force all conflicts to become errors</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeShnZ3Bsb3QyKVxubGlicmFyeShzaGlueSlcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+library(ggplot2)
+library(shiny)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogcGFja2FnZSDigJhzaGlueeKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDQuMy4zXG4ifQ== --&gt;
+</code></pre>
+<p>Warning: package ‘shiny’ was built under R version 4.3.3</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeShkcGx5cilcblxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+library(dplyr)
+</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Load data from my project location.
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBSZWFkIHRoZSBkYXRhc2V0IChhZGp1c3QgdGhlIHBhdGggYWNjb3JkaW5nbHkpXG5DbG91ZEF0dGFjayA8LSByZWFkLmNzdihcIn4vSFVMVC9JbnRyb2R1Y3Rpb24tUi9Qcm9qZWN0L0Nsb3VkV2F0Y2hfVHJhZmZpY19XZWJfQXR0YWNrLmNzdlwiKVxuI0JlZ2dpbmluZyBvZiBkYXRhIE1hc3NhZ2luZyAmIGZlYXR1cmUgZW5naW5lZXJpbmdcbmlzLkRhdGUoQ2xvdWRBdHRhY2skY3JlYXRpb25fdGltZSkgI0NoZWNrIGlmIENyZWF0aW9uIFRpbWUgaXMgYSBEYXRhXG5pcy5EYXRlKENsb3VkQXR0YWNrJGVuZF90aW1lKSAjQ2hlY2sgaWYgRW5kIFRpbWUgaXMgYSBEYXRhXG5pcy5EYXRlKENsb3VkQXR0YWNrJHRpbWUpICNDaGVjayBpZiAgVGltZSBpcyBhIERhdGFcblxuXG50YWJsZShDbG91ZEF0dGFjayR0aW1lKSAjIHdoYXQgaW5zaWdodHMgY2FuIHdlIGRyYXcgZnJvbSB0aW1lXG50YWJsZShDbG91ZEF0dGFjayRjcmVhdGlvbl90aW1lKSAjIHdoYXQgaW5zaWdodHMgY2FuIHdlIGRyYXcgZnJvbSBzdGFydCB0aW1lIG9mIGF0dGFja1xudGFibGUoQ2xvdWRBdHRhY2skZW5kX3RpbWUpICMgd2hhdCBpbnNpZ2h0cyBjYW4gd2UgZHJhdyBmcm9tIGVuZCB0aW1lIG9mIGF0dGFja1xuXG5cbmBgYCJ9 --&gt;
+
+```r
+# Read the dataset (adjust the path accordingly)
 CloudAttack &lt;- read.csv(&quot;~/HULT/Introduction-R/Project/CloudWatch_Traffic_Web_Attack.csv&quot;)
+#Beggining of data Massaging &amp; feature engineering
+is.Date(CloudAttack$creation_time) #Check if Creation Time is a Data
+is.Date(CloudAttack$end_time) #Check if End Time is a Data
+is.Date(CloudAttack$time) #Check if  Time is a Data
 
-# Step 1: Identify high-attacked countries
-high_attacked_countries &lt;- CloudAttack %&gt;%
-  group_by(src_ip_country_code) %&gt;%
-  summarise(Attacks = n()) %&gt;%
-  arrange(desc(Attacks))
 
-# Create a bar chart
-ggplot(high_attacked_countries, aes(x = reorder(src_ip_country_code, Attacks), y = Attacks)) +
-  geom_bar(stat = &quot;identity&quot;, fill = &quot;#1b98e0&quot;) +
-  labs(title = &quot;Number of Attacks by Country&quot;,
-       x = &quot;Country&quot;,
-       y = &quot;Number of Attacks&quot;) +
-  theme_minimal()  # Customize the plot theme as desired</code></pre>
+table(CloudAttack$time) # what insights can we draw from time
+table(CloudAttack$creation_time) # what insights can we draw from start time of attack
+table(CloudAttack$end_time) # what insights can we draw from end time of attack
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1833,7 +1857,7 @@ ggplot(high_attacked_countries, aes(x = reorder(src_ip_country_code, Attacks), y
 Country</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIFN0ZXAgMTogSWRlbnRpZnkgaGlnaC1hdHRhY2tlZCBjb3VudHJpZXNcbmhpZ2hfYXR0YWNrZWRfY291bnRyaWVzIDwtIENsb3VkQXR0YWNrICU+JVxuICBncm91cF9ieShzcmNfaXBfY291bnRyeV9jb2RlKSAlPiVcbiAgc3VtbWFyaXNlKEF0dGFja3MgPSBuKCkpICU+JVxuICBhcnJhbmdlKGRlc2MoQXR0YWNrcykpXG5cbiMgQ3JlYXRlIGEgYmFyIGNoYXJ0IGZvciBhdHRhY2tlZCBjb3VudHJpZXNcbmdncGxvdChoaWdoX2F0dGFja2VkX2NvdW50cmllcywgYWVzKHggPSByZW9yZGVyKHNyY19pcF9jb3VudHJ5X2NvZGUsIEF0dGFja3MpLCB5ID0gQXR0YWNrcykpICtcbiAgZ2VvbV9iYXIoc3RhdCA9IFwiaWRlbnRpdHlcIiwgZmlsbCA9IFwiIzFiOThlMFwiKSArXG4gIGxhYnModGl0bGUgPSBcIk51bWJlciBvZiBBdHRhY2tzIGJ5IENvdW50cnlcIixcbiAgICAgICB4ID0gXCJDb3VudHJ5XCIsXG4gICAgICAgeSA9IFwiTnVtYmVyIG9mIEF0dGFja3NcIikgK1xuICB0aGVtZV9taW5pbWFsKCkgICMgQ3VzdG9taXplIHRoZSBwbG90IHRoZW1lIGFzIGRlc2lyZWRcblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIFN0ZXAgMTogSWRlbnRpZnkgaGlnaC1hdHRhY2tlZCBjb3VudHJpZXNcbmhpZ2hfYXR0YWNrZWRfY291bnRyaWVzIDwtIENsb3VkQXR0YWNrICU+JVxuICBncm91cF9ieShzcmNfaXBfY291bnRyeV9jb2RlKSAlPiVcbiAgc3VtbWFyaXNlKEF0dGFja3MgPSBuKCkpICU+JVxuICBhcnJhbmdlKGRlc2MoQXR0YWNrcykpXG5cbiMgQ3JlYXRlIGEgYmFyIGNoYXJ0IGZvciBhdHRhY2tlZCBjb3VudHJpZXNcbmdncGxvdChoaWdoX2F0dGFja2VkX2NvdW50cmllcywgYWVzKHggPSByZW9yZGVyKHNyY19pcF9jb3VudHJ5X2NvZGUsIEF0dGFja3MpLCB5ID0gQXR0YWNrcykpICtcbiAgZ2VvbV9iYXIoc3RhdCA9IFwiaWRlbnRpdHlcIiwgZmlsbCA9IFwiIzFiOThlMFwiKSArXG4gIGxhYnModGl0bGUgPSBcIk51bWJlciBvZiBBdHRhY2tzIGJ5IENvdW50cnlcIixcbiAgICAgICB4ID0gXCJDb3VudHJ5XCIsXG4gICAgICAgeSA9IFwiTnVtYmVyIG9mIEF0dGFja3NcIikgK1xuICB0aGVtZV9taW5pbWFsKCkgICMgQ3VzdG9taXplIHRoZSBwbG90IHRoZW1lIGFzIGRlc2lyZWRcblxuIyBGaW5kIGR1cmF0aW9uIG9mIGVhY2ggYXR0YWNrXG5DbG91ZEF0dGFjayRhdHRhY2tfZHVyYXRpb24gPC0gQ2xvdWRBdHRhY2skZW5kX3RpbWUgLSBDbG91ZEF0dGFjayRjcmVhdGlvbl90aW1lXG5WaWV3KENsb3VkQXR0YWNrKVxudGFibGUoQ2xvdWRBdHRhY2skYXR0YWNrX2R1cmF0aW9uKSAjIEFsbCB0aGUgYXR0YWNrcyBhcmUgMTAgbWludXRlcyBsb25nXG50YWJsZShDbG91ZEF0dGFjayRzcmNfaXApICMgTG9va3MgbGlrZSB0aGUgYXR0YWNrcyBhcmUgY29taW5nIGZyb20gYSBoYW5kZnVsIG9mIElQc1xuIyBMb29rcyBsaWtlIHRoZSBkYXRhIGlzbid0IGNsZWFuLiBcbiMgV2UgaGF2ZSBVUyBzaG93aW5nIHVwIGFsb25nc2lkZSBOTCwgSUwoSWxsaW5pb3MpLCBDQSAoQ2FsaWZvcm5pYSlcbnRhYmxlKENsb3VkQXR0YWNrJHNyY19pcF9jb3VudHJ5X2NvZGUpIFxuXG5gYGAifQ== -->
 <pre class="r"><code>
 # Step 1: Identify high-attacked countries
 high_attacked_countries &lt;- CloudAttack %&gt;%
@@ -1848,35 +1872,41 @@ ggplot(high_attacked_countries, aes(x = reorder(src_ip_country_code, Attacks), y
        x = &quot;Country&quot;,
        y = &quot;Number of Attacks&quot;) +
   theme_minimal()  # Customize the plot theme as desired
+
+# Find duration of each attack
+CloudAttack$attack_duration &lt;- CloudAttack$end_time - CloudAttack$creation_time
+View(CloudAttack)
+table(CloudAttack$attack_duration) # All the attacks are 10 minutes long
+table(CloudAttack$src_ip) # Looks like the attacks are coming from a handful of IPs
+# Looks like the data isn&#39;t clean. 
+# We have US showing up alongside NL, IL(Illinios), CA (California)
+table(CloudAttack$src_ip_country_code) 
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-plot-begin eyJoZWlnaHQiOjQwMS43MzA1LCJ3aWR0aCI6NjUwLCJzaXplX2JlaGF2aW9yIjowLCJjb25kaXRpb25zIjpbXX0= -->
-<p><img src="data:image/png;base64,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" /></p>
-<!-- rnb-plot-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Step2: identify pattern of attack duration or exchange data</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnR0aW1lIDwtIHJlYWQuY3N2KENsb3VkQXR0YWNrLCBcImNyZWF0aW9uX3RpbWVcIilcbmVuZHRpbWUgPC0gcmVhZC5jc3YoQ2xvdWRBdHRhY2ssIFwiZW5kX3RpbWVcIilcbmBgYCJ9 -->
-<pre class="r"><code>starttime &lt;- read.csv(CloudAttack, &quot;creation_time&quot;)
-endtime &lt;- read.csv(CloudAttack, &quot;end_time&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTaG93IElwIGFkcmVzc2VzIHRoYXQgYXR0YWNrcyB0aGUgVVMgXG5cblxuXG4jIFNob3cgc291cmNlIElQIGNvdW50cnkgXG5gYGAifQ== -->
+<pre class="r"><code># Show Ip adresses that attacks the US 
+
+
+
+# Show source IP country </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Which IPs should the US blacklist to reduce the amount of attacks</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnR0aW1lIDwtIHJlYWQuY3N2KENsb3VkQXR0YWNrLCBcImNyZWF0aW9uX3RpbWVcIilcbmVuZHRpbWUgPC0gcmVhZC5jc3YoQ2xvdWRBdHRhY2ssIFwiZW5kX3RpbWVcIilcbmBgYCJ9 -->
-<pre class="r"><code>starttime &lt;- read.csv(CloudAttack, &quot;creation_time&quot;)
-endtime &lt;- read.csv(CloudAttack, &quot;end_time&quot;)</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkludHJvZHVjdGlvbiB0byBSIC0gR3JvdXAgUHJvamVjdCINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCiMjICpBdXRob3IqOiAiVGF0amFuYSBOaWxsIGFuZCBPbW9nYm9sYWhhbiBBbGxpIiwNCg0KIyMjIFByb2JsZW06IFByb2JsZW0gU3RhdGVtZW50OiBGaW5kIGhpZ2ggYXR0YWNrIENvdW50cmllcywgdHJhZmZpYyBleGNoYW5nZSBhbmQgYXR0YWNrIGR1cmF0aW9uIHRvIHByZXZlbnQgZnV0dXJlIGF0dGFja3MhDQoNClN0ZXAxOiBJZGVudGlmeSBoaWdoIGF0dGFja2VkIGNvdW50cmllcw0KU3RlcDI6IGlkZW50aWZ5IHBhdHRlcm4gb2YgYXR0YWNrIGR1cmF0aW9uIG9yIGV4Y2hhbmdlIGRhdGENClN0ZXAzOiBBcmUgdGhlIGF0dGFja2VkIGNoYW5uZWxzIHRoZSBzYW1lPw0KU3RlcDQ6IFdoYXQgaXMgdGhlIGR1cmF0aW9uIG9mIHRoZSBhdHRhY2sgdGltZSwgYXJlIHRoZXkgcmVhbGx5IGNyaXRpY2FsIC0gYm9vdCBmb3JjZSBvciBqdXN0IHBlbmV0cmF0aW9uIHRlc3Q/DQpTdGVwNTogQ29uY2x1c2lvbiBvbiBmaW5kaW5ncw0KDQpUaGlzIGlzIGFuIFtDeWJlcnNlY3VyaXR5OiBTdXNwaWNpb3VzIFdlYiBUaHJlYXQgSW50ZXJhY3Rpb25zXShodHRwczovL3d3dy5rYWdnbGUuY29tL2RhdGFzZXRzL2phbmNzZy9jeWJlcnNlY3VyaXR5LXN1c3BpY2lvdXMtd2ViLXRocmVhdC1pbnRlcmFjdGlvbnMpIFByb2plY3QuDQoNCkZpcnN0IHdlIG5lZWQgdG8gcHJlcGFyZSBvdXIgZW52aXJvbm1lbnQgYnkgbG9hZGluZyByZXF1aXJlZCBsaWJyYXJpZXMuDQpgYGB7ciBMT0FEOiBFbnZpcm9ubWVudH0NCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShzaGlueSkNCmxpYnJhcnkoZHBseXIpDQoNCmBgYA0KDQpMb2FkIGRhdGEgZnJvbSBteSBwcm9qZWN0IGxvY2F0aW9uLg0KYGBge3IgTE9BRDogREFUQX0NCiMgUmVhZCB0aGUgZGF0YXNldCAoYWRqdXN0IHRoZSBwYXRoIGFjY29yZGluZ2x5KQ0KQ2xvdWRBdHRhY2sgPC0gcmVhZC5jc3YoIn4vSFVMVC9JbnRyb2R1Y3Rpb24tUi9Qcm9qZWN0L0Nsb3VkV2F0Y2hfVHJhZmZpY19XZWJfQXR0YWNrLmNzdiIpDQoNCmBgYA0KDQpTdGVwMTogSWRlbnRpZnkgaGlnaCBhdHRhY2tlZCBjb3VudHJpZXMNCkNvdW50IHRoZSBhdHRhY2tzIHBlciBDb3VudHJ5DQpgYGB7ciBDT1VOVDogQXR0YWNrIHBlciBDb3VudHJ5fQ0KDQojIFN0ZXAgMTogSWRlbnRpZnkgaGlnaC1hdHRhY2tlZCBjb3VudHJpZXMNCmhpZ2hfYXR0YWNrZWRfY291bnRyaWVzIDwtIENsb3VkQXR0YWNrICU+JQ0KICBncm91cF9ieShzcmNfaXBfY291bnRyeV9jb2RlKSAlPiUNCiAgc3VtbWFyaXNlKEF0dGFja3MgPSBuKCkpICU+JQ0KICBhcnJhbmdlKGRlc2MoQXR0YWNrcykpDQoNCiMgQ3JlYXRlIGEgYmFyIGNoYXJ0IGZvciBhdHRhY2tlZCBjb3VudHJpZXMNCmdncGxvdChoaWdoX2F0dGFja2VkX2NvdW50cmllcywgYWVzKHggPSByZW9yZGVyKHNyY19pcF9jb3VudHJ5X2NvZGUsIEF0dGFja3MpLCB5ID0gQXR0YWNrcykpICsNCiAgZ2VvbV9iYXIoc3RhdCA9ICJpZGVudGl0eSIsIGZpbGwgPSAiIzFiOThlMCIpICsNCiAgbGFicyh0aXRsZSA9ICJOdW1iZXIgb2YgQXR0YWNrcyBieSBDb3VudHJ5IiwNCiAgICAgICB4ID0gIkNvdW50cnkiLA0KICAgICAgIHkgPSAiTnVtYmVyIG9mIEF0dGFja3MiKSArDQogIHRoZW1lX21pbmltYWwoKSAgIyBDdXN0b21pemUgdGhlIHBsb3QgdGhlbWUgYXMgZGVzaXJlZA0KDQpgYGANClN0ZXAyOiBpZGVudGlmeSBwYXR0ZXJuIG9mIGF0dGFjayBkdXJhdGlvbiBvciBleGNoYW5nZSBkYXRhDQoNCmBgYHtyIEFOQUxZU0lTOiBpbmRlbnRpZnkgcGF0dGVybn0NCnN0YXJ0dGltZSA8LSByZWFkLmNzdihDbG91ZEF0dGFjaywgImNyZWF0aW9uX3RpbWUiKQ0KZW5kdGltZSA8LSByZWFkLmNzdihDbG91ZEF0dGFjaywgImVuZF90aW1lIikNCmBgYA0KDQoNCmBgYHtyIEFOQUxZU0lTOiBpbmRlbnRpZnkgcGF0dGVybn0NCmBgYA0KDQoNCg0K</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50cm9kdWN0aW9uIHRvIFIgLSBHcm91cCBQcm9qZWN0IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIyAqQXV0aG9yKjogVGF0amFuYSBOaWxsIGFuZCBPbW9nYm9sYWhhbiBBbGxpCgojIyMgUHJvYmxlbTogUHJvYmxlbSBTdGF0ZW1lbnQ6IEZpbmQgaGlnaCBhdHRhY2sgQ291bnRyaWVzLCB0cmFmZmljIGV4Y2hhbmdlIGFuZCBhdHRhY2sgZHVyYXRpb24gdG8gcHJldmVudCBmdXR1cmUgYXR0YWNrcyEKClN0ZXAxOiBJZGVudGlmeSBoaWdoIGF0dGFja2VkIGNvdW50cmllcwpTdGVwMjogaWRlbnRpZnkgcGF0dGVybiBvZiBhdHRhY2sgZHVyYXRpb24gb3IgZXhjaGFuZ2UgZGF0YQpTdGVwMzogQXJlIHRoZSBhdHRhY2tlZCBjaGFubmVscyB0aGUgc2FtZT8KU3RlcDQ6IFdoYXQgaXMgdGhlIGR1cmF0aW9uIG9mIHRoZSBhdHRhY2sgdGltZSwgYXJlIHRoZXkgcmVhbGx5IGNyaXRpY2FsIC0gYm9vdCBmb3JjZSBvciBqdXN0IHBlbmV0cmF0aW9uIHRlc3Q/ClN0ZXA1OiBDb25jbHVzaW9uIG9uIGZpbmRpbmdzCgpUaGlzIGlzIGFuIFtDeWJlcnNlY3VyaXR5OiBTdXNwaWNpb3VzIFdlYiBUaHJlYXQgSW50ZXJhY3Rpb25zXShodHRwczovL3d3dy5rYWdnbGUuY29tL2RhdGFzZXRzL2phbmNzZy9jeWJlcnNlY3VyaXR5LXN1c3BpY2lvdXMtd2ViLXRocmVhdC1pbnRlcmFjdGlvbnMpIFByb2plY3QuCgpGaXJzdCB3ZSBuZWVkIHRvIHByZXBhcmUgb3VyIGVudmlyb25tZW50IGJ5IGxvYWRpbmcgcmVxdWlyZWQgbGlicmFyaWVzLgpgYGB7ciBMT0FEOiBFbnZpcm9ubWVudH0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZ2dwbG90MikKbGlicmFyeShzaGlueSkKbGlicmFyeShkcGx5cikKCmBgYAoKTG9hZCBkYXRhIGZyb20gbXkgcHJvamVjdCBsb2NhdGlvbi4KYGBge3IgTE9BRDogREFUQX0KIyBSZWFkIHRoZSBkYXRhc2V0IChhZGp1c3QgdGhlIHBhdGggYWNjb3JkaW5nbHkpCkNsb3VkQXR0YWNrIDwtIHJlYWQuY3N2KCJ+L0hVTFQvSW50cm9kdWN0aW9uLVIvUHJvamVjdC9DbG91ZFdhdGNoX1RyYWZmaWNfV2ViX0F0dGFjay5jc3YiKQojQmVnZ2luaW5nIG9mIGRhdGEgTWFzc2FnaW5nICYgZmVhdHVyZSBlbmdpbmVlcmluZwppcy5EYXRlKENsb3VkQXR0YWNrJGNyZWF0aW9uX3RpbWUpICNDaGVjayBpZiBDcmVhdGlvbiBUaW1lIGlzIGEgRGF0YQppcy5EYXRlKENsb3VkQXR0YWNrJGVuZF90aW1lKSAjQ2hlY2sgaWYgRW5kIFRpbWUgaXMgYSBEYXRhCmlzLkRhdGUoQ2xvdWRBdHRhY2skdGltZSkgI0NoZWNrIGlmICBUaW1lIGlzIGEgRGF0YQoKCnRhYmxlKENsb3VkQXR0YWNrJHRpbWUpICMgd2hhdCBpbnNpZ2h0cyBjYW4gd2UgZHJhdyBmcm9tIHRpbWUKdGFibGUoQ2xvdWRBdHRhY2skY3JlYXRpb25fdGltZSkgIyB3aGF0IGluc2lnaHRzIGNhbiB3ZSBkcmF3IGZyb20gc3RhcnQgdGltZSBvZiBhdHRhY2sKdGFibGUoQ2xvdWRBdHRhY2skZW5kX3RpbWUpICMgd2hhdCBpbnNpZ2h0cyBjYW4gd2UgZHJhdyBmcm9tIGVuZCB0aW1lIG9mIGF0dGFjawoKCmBgYAoKU3RlcDE6IElkZW50aWZ5IGhpZ2ggYXR0YWNrZWQgY291bnRyaWVzCkNvdW50IHRoZSBhdHRhY2tzIHBlciBDb3VudHJ5CmBgYHtyIENPVU5UOiBBdHRhY2sgcGVyIENvdW50cnl9CgojIFN0ZXAgMTogSWRlbnRpZnkgaGlnaC1hdHRhY2tlZCBjb3VudHJpZXMKaGlnaF9hdHRhY2tlZF9jb3VudHJpZXMgPC0gQ2xvdWRBdHRhY2sgJT4lCiAgZ3JvdXBfYnkoc3JjX2lwX2NvdW50cnlfY29kZSkgJT4lCiAgc3VtbWFyaXNlKEF0dGFja3MgPSBuKCkpICU+JQogIGFycmFuZ2UoZGVzYyhBdHRhY2tzKSkKCiMgQ3JlYXRlIGEgYmFyIGNoYXJ0IGZvciBhdHRhY2tlZCBjb3VudHJpZXMKZ2dwbG90KGhpZ2hfYXR0YWNrZWRfY291bnRyaWVzLCBhZXMoeCA9IHJlb3JkZXIoc3JjX2lwX2NvdW50cnlfY29kZSwgQXR0YWNrcyksIHkgPSBBdHRhY2tzKSkgKwogIGdlb21fYmFyKHN0YXQgPSAiaWRlbnRpdHkiLCBmaWxsID0gIiMxYjk4ZTAiKSArCiAgbGFicyh0aXRsZSA9ICJOdW1iZXIgb2YgQXR0YWNrcyBieSBDb3VudHJ5IiwKICAgICAgIHggPSAiQ291bnRyeSIsCiAgICAgICB5ID0gIk51bWJlciBvZiBBdHRhY2tzIikgKwogIHRoZW1lX21pbmltYWwoKSAgIyBDdXN0b21pemUgdGhlIHBsb3QgdGhlbWUgYXMgZGVzaXJlZAoKIyBGaW5kIGR1cmF0aW9uIG9mIGVhY2ggYXR0YWNrCkNsb3VkQXR0YWNrJGF0dGFja19kdXJhdGlvbiA8LSBDbG91ZEF0dGFjayRlbmRfdGltZSAtIENsb3VkQXR0YWNrJGNyZWF0aW9uX3RpbWUKVmlldyhDbG91ZEF0dGFjaykKdGFibGUoQ2xvdWRBdHRhY2skYXR0YWNrX2R1cmF0aW9uKSAjIEFsbCB0aGUgYXR0YWNrcyBhcmUgMTAgbWludXRlcyBsb25nCnRhYmxlKENsb3VkQXR0YWNrJHNyY19pcCkgIyBMb29rcyBsaWtlIHRoZSBhdHRhY2tzIGFyZSBjb21pbmcgZnJvbSBhIGhhbmRmdWwgb2YgSVBzCiMgTG9va3MgbGlrZSB0aGUgZGF0YSBpc24ndCBjbGVhbi4gCiMgV2UgaGF2ZSBVUyBzaG93aW5nIHVwIGFsb25nc2lkZSBOTCwgSUwoSWxsaW5pb3MpLCBDQSAoQ2FsaWZvcm5pYSkKdGFibGUoQ2xvdWRBdHRhY2skc3JjX2lwX2NvdW50cnlfY29kZSkgCgpgYGAKU3RlcDI6IGlkZW50aWZ5IHBhdHRlcm4gb2YgYXR0YWNrIGR1cmF0aW9uIG9yIGV4Y2hhbmdlIGRhdGEKCmBgYHtyIEFOQUxZU0lTOiBpbmRlbnRpZnkgcGF0dGVybn0KIyBTaG93IElwIGFkcmVzc2VzIHRoYXQgYXR0YWNrcyB0aGUgVVMgCgoKCiMgU2hvdyBzb3VyY2UgSVAgY291bnRyeSAKYGBgCgpXaGljaCBJUHMgc2hvdWxkIHRoZSBVUyBibGFja2xpc3QgdG8gcmVkdWNlIHRoZSBhbW91bnQgb2YgYXR0YWNrcwoKYGBge3IgUkVTVUxUOiBPdXRjb21lfQoKCgoKYGBgYGBgYGBgCgoKCg==</div>
 
 
 
