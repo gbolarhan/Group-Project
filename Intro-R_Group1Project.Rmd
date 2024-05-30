@@ -1,14 +1,18 @@
 ---
-Title: "Predicting Web Traffic Attack Patterns"
-Subtitle: "Web Traffic Attack Pattern"
-Authors: "Omogbolahan Alli & Tatjana Nill"
-Email: "oalli@student.hult.edu"
+Title: Predicting Web Traffic Attack Patterns
+Subtitle: Web Traffic Attack Pattern
+Authors: Omogbolahan Alli & Tatjana Nill
+Email: oalli@student.hult.edu
 Output: html_document
 ---
 
 ## Project Overview
 
 This project aims to analyze web traffic data from an online store to identify potential attack patterns. We'll explore various aspects of the data to gain insights into the nature of these attacks and their impact on the store's operations.
+
+
+# Download Dataset from Kaggle
+Download [Cybersecurity: Suspicious Web Threat Interactions](https://www.kaggle.com/datasets/nobukim/aws-cloudtrails-dataset-from-flaws-cloud) data.
 
 ## Libraries and Data Preparation
 
